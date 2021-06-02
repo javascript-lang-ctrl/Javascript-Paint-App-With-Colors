@@ -17,12 +17,18 @@
 <button onclick="orangePen()">orange</button>
 <button onclick="yellowPen()">Yellow</button>
 <button onclick="purplePen()">Purple</button>
+<button onclick="setHex()">Set Color </button>
+<input type="text" id="hex">
 
 
         <button onclick="ClearPaint()">Clear</button>
     </div>
 
     <script>
+var hex = document.getElementById('hex');
+function setHex(){
+style = hex.value;
+}
 let paint = document.querySelector('#paint')
 let ctx = paint.getContext("2d");
 let x = 0;
